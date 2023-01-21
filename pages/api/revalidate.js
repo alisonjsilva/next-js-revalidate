@@ -2,7 +2,7 @@ export default async function handler(
     req,
     res,
 ) {
-    res.revalidate('/revalidate');
+    await res.revalidate('/revalidate');
 
     return res.json({ revalidated: true })
 }
